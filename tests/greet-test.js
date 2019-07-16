@@ -1,4 +1,4 @@
-describe('geetings' , function(){
+describe('Greetings' , function(){
    
 
     it('should return the name entered ' , function(){
@@ -28,16 +28,16 @@ describe('geetings' , function(){
     it('should return name and the greeted language Afrikaans ' , function(){
         let nameEntered3 = FactoryGreetings();
 
-        nameEntered3.greetNameEntered('Iviwe ', 'Afrikaans');
+        nameEntered3.greetNameEntered('Plaatjie ', 'Afrikaans');
 
-        assert.deepEqual('Hallo, Iviwe', nameEntered3.getStr()); 
+        assert.deepEqual('Hallo, Plaatjie', nameEntered3.getStr()); 
         
     });
      
     it('should return the number that has been created ' , function(){
         let greetings = FactoryGreetings();  
 
-        greetings.greetNameEntered('Yolo');
+        greetings.peopleGreeted('Yolo');
         assert.deepEqual(1, greetings.countDisplay());
     });
     

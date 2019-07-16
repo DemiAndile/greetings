@@ -1,2 +1,4 @@
-var greetElement = document.querySelector(".greet");
-var countNames = document.querySelector(".counter");
+var  = document.querySelector("");
+var  = document.querySelector("");
+
+let greetings = FactoryGreetings(); 

@@ -14,19 +14,28 @@ h1{
     text-align: center;
 }
 label{
-   color:white;
+   color:black;
 }
 
 .name{
    display: flex;
    justify-content: center;
-   margin-left: 10em;
+   margin-left: 15em; 
+   font: 30px arial, sans-serif;
 }
 
 .language{
    display: flex;
    justify-content: center;
    font-size: 3em;
+}
+
+.counter{
+   display: flex;
+   justify-content: center;
+   color: black;
+   padding-right: 35em;
+   font-size: 2em;
 }
 
 .greet-button{
@@ -37,7 +46,7 @@ span{
    color:black;
    font-size: 16px;
    margin:3em;
+   font: 20px arial, sans-serif;
 
-   /* background-color: grey; */
 }
 

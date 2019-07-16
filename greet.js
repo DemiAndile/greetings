@@ -1,14 +1,15 @@
 function FactoryGreetings(nameList) {
     var greetedNames = {} || nameList;
     var str = "";
+   var c = 0;
     function peopleGreeted(fname) {
-        var namesOnly = fname.replace(/\d/,fname); 
-        var namesOnly = namesOnly.charAt(0).toUpperCase() + namesOnly.slice(1); 
+        // var namesOnly = fname.replace(/\d/,fname); 
+        var upperCaseName = fname.charAt(0).toUpperCase() + fname.slice(1); 
         if (greetedNames['name'] === undefined) {
-            greetedNames['name'] = namesOnly;
+            greetedNames['name'] = upperCaseName;
         }
         else {
-            greetedNames['name'] = namesOnly;
+            greetedNames['name'] = upperCaseName;
         }
     }
 
@@ -22,7 +23,7 @@ function FactoryGreetings(nameList) {
         }
 
         else if (lang === "Afrikaans") {
-            str =  "Hallo " + fname;
+            str =  "Hallo, " + fname;
         }
     }
 
@@ -31,18 +32,21 @@ function FactoryGreetings(nameList) {
     }
 
     function countDisplay() {
-        var c = Object.keys(greetedNames);
+        c = Object.keys(greetedNames);
         return c.length;
     }
+
     function getStr(){
         return str.trim();
     }
+    
     return {
         peopleGreeted,
         greetNameEntered,
         getName,
         countDisplay,
         getStr
+       
 
     }
 }
