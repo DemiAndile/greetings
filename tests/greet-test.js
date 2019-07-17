@@ -34,7 +34,7 @@ describe('Greetings' , function(){
         
     });
      
-    it('should return the number that has been created ' , function(){
+    it('should count the number of times a name was greeted ' , function(){
         let greetings = FactoryGreetings();  
 
         greetings.peopleGreeted('Yolo');

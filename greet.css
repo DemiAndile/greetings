@@ -31,8 +31,7 @@ label{
 }
 
 .counter{
-   display: flex;
-   justify-content: center;
+   
    color: black;
    padding-right: 35em;
    font-size: 2em;
