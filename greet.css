@@ -1,5 +1,5 @@
 body {
-   background-image: url(backlit.jpg);
+   background-image: url(backlit.jpg); 
    background-repeat: no-repeat;
    background-size: cover;
 }
@@ -10,42 +10,55 @@ h1{
     color: aqua;
     border: 5px solid white;
     width: 200px;
-    margin: 60px auto;
+    margin: 30px auto;
     text-align: center;
 }
 label{
    color:black;
 }
+.msg{
+   display: flex;
+   justify-content: center; 
+   color: black;
+}
 
 .name{
    display: flex;
-   justify-content: center;
-   margin-left: 15em; 
+   justify-content: center; 
    font: 30px arial, sans-serif;
 }
 
 .language{
-   display: flex;
    justify-content: center;
+   display: flex;
    font-size: 3em;
+   padding-block-start: auto;
 }
 
 .counter{
-   
-   color: black;
-   padding-right: 35em;
-   font-size: 2em;
+   display: flex;
+   justify-content: center;
+   color: black; 
+   font-size: 1.5em; 
+
 }
 
 .greet-button{
-   display: flex;
-   justify-content: center;
-} 
-span{
-   color:black;
-   font-size: 16px;
-   margin:3em;
-   font: 20px arial, sans-serif;
+   display: block;
+   max-width: 200px;
+   margin: auto;
+   font-size: 1em; 
 
 }
 
+span{
+   color:black;
+   font: 15px arial, sans-serif;
+
+}
+
+.resettingButton{
+   display: block;
+   max-width: 200px;
+   margin-top: 1em;
+}

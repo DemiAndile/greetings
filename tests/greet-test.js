@@ -37,7 +37,11 @@ describe('Greetings' , function(){
     it('should count the number of times a name was greeted ' , function(){
         let greetings = FactoryGreetings();  
 
-        greetings.peopleGreeted('Yolo');
+        greetings.getName('Yolo');
+        greetings.getName('Yolo');
+        greetings.getName('Yolo');
+        greetings.getName('Yolo');
+        
         assert.deepEqual(1, greetings.countDisplay());
     });
     

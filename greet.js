@@ -1,30 +1,32 @@
 function FactoryGreetings(nameList) {
-    var greetedNames = {} || nameList;
-    var str = "";
-   var c = 0;
-    function peopleGreeted(fname) {
-        // var namesOnly = fname.replace(/\d/,fname); 
-        var upperCaseName = fname.charAt(0).toUpperCase() + fname.slice(1); 
-        if (greetedNames['name'] === undefined) {
-            greetedNames['name'] = upperCaseName;
-        }
-        else {
-            greetedNames['name'] = upperCaseName;
-        }
-    }
+    var greetedNames = nameList || {};
+    // var str = "";
+    var c = 0;
+    
 
     function greetNameEntered(fname, lang) {
 
+        if(!lang){
+             return "Choose a language";   
+          }
+
+        var upperCaseName = fname.charAt(0).toUpperCase() + fname.slice(1); 
+       
+        if (greetedNames[upperCaseName] === undefined) {
+            greetedNames[upperCaseName] = 0;
+        }
+
         if (lang === "English") {
-            str = "Hello, " + fname;
+            return  "Hello, " + upperCaseName;
         }
         else if (lang === "IsiXhosa") {
-            str = "Molo, " + fname;
+            return  "Molo, " + upperCaseName;
         }
 
         else if (lang === "Afrikaans") {
-            str =  "Hallo, " + fname;
+            return   "Hallo, " + upperCaseName;
         }
+        
     }
 
     function getName() {
@@ -36,16 +38,11 @@ function FactoryGreetings(nameList) {
         return c.length;
     }
 
-    function getStr(){
-        return str.trim();
-    }
-    
     return {
-        peopleGreeted,
+        // peopleGreeted,
         greetNameEntered,
         getName,
-        countDisplay,
-        getStr
+        countDisplay
        
 
     }
