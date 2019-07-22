@@ -45,5 +45,16 @@ describe('Greetings' , function(){
         assert.equal(5,greetings.countDisplay());
     });
     
+    it('should not  count duplicates  ' , function(){
+        let greetings = FactoryGreetings();  
+
+        greetings.greetNameEntered('Jason', 'English' );
+        greetings.greetNameEntered('Jason', 'English' );
+        greetings.greetNameEntered('Jason', 'English' );
+        greetings.greetNameEntered('Jason', 'English' );
+        greetings.greetNameEntered('Jason', 'English' );
+        
+        assert.equal(1,greetings.countDisplay());
+    });
     
 }); 
