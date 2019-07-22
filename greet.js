@@ -1,13 +1,13 @@
 function FactoryGreetings(nameList) {
     var greetedNames = nameList || {};
     // var str = "";
-    var c = 0;
+    var count = 0;
     
 
     function greetNameEntered(fname, lang) {
 
         if(!lang){
-             return "Choose a language";   
+             return "Please enter a name and choose a language";   
           }
 
         var upperCaseName = fname.charAt(0).toUpperCase() + fname.slice(1); 
@@ -34,8 +34,9 @@ function FactoryGreetings(nameList) {
     }
 
     function countDisplay() {
-        c = Object.keys(greetedNames);
-        return c.length;
+      var  c = Object.keys(greetedNames);
+      count = c.length;
+      return count;
     }
 
     return {

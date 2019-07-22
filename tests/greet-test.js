@@ -1,48 +1,48 @@
 describe('Greetings' , function(){
    
 
-    it('should return the name entered ' , function(){
+    it('should not take an empty string ' , function(){
         let greetings = FactoryGreetings();  //  creating an instance so that you have access to closures that are defined inside the factory function 
-        greetings.peopleGreeted('yolo');
-
-        assert.deepEqual({name : 'Yolo'}, greetings.getName());
+    
+        assert.deepEqual("Please enter a name and choose a language", greetings.greetNameEntered());
     });
     
 
     it('should return the name and the language that is entered ' , function(){
         let nameEntered = FactoryGreetings();
 
-        nameEntered.greetNameEntered('Demi ', 'English');
-
-        assert.deepEqual('Hello, Demi', nameEntered.getStr());
+        assert.equal('Hello, Demi ', nameEntered.greetNameEntered('Demi ', 'English'));
     });
 
     it('should return the Language IsiXhosa and the name ' , function(){
         let nameEntered2 = FactoryGreetings();
 
-        nameEntered2.greetNameEntered('Iviwe ', 'IsiXhosa');
-
-        assert.deepEqual('Molo, Iviwe', nameEntered2.getStr());
+        assert.equal('Molo, Iviwe ', nameEntered2.greetNameEntered('Iviwe ', 'IsiXhosa'));
     });
 
     it('should return name and the greeted language Afrikaans ' , function(){
         let nameEntered3 = FactoryGreetings();
 
-        nameEntered3.greetNameEntered('Plaatjie ', 'Afrikaans');
-
-        assert.deepEqual('Hallo, Plaatjie', nameEntered3.getStr()); 
+        assert.equal('Hallo, Plaatjie ', nameEntered3.greetNameEntered('Plaatjie ', 'Afrikaans')); 
         
     });
+
+    it('should return first letter upperCase ' , function(){
+        let nameEntered1 = FactoryGreetings();
+
+        assert.equal('Hello, Demi ', nameEntered1.greetNameEntered('demi ', 'English'));
+    });
      
-    it('should count the number of times a name was greeted ' , function(){
+    it('should count the number of times a names were greeted ' , function(){
         let greetings = FactoryGreetings();  
 
-        greetings.getName('Yolo');
-        greetings.getName('Yolo');
-        greetings.getName('Yolo');
-        greetings.getName('Yolo');
-        
-        assert.deepEqual(1, greetings.countDisplay());
+        greetings.greetNameEntered('Jason', 'English' );
+        greetings.greetNameEntered('Jesse', 'English' );
+        greetings.greetNameEntered('Demi', 'English' );
+        greetings.greetNameEntered('Thando', 'English' );
+        greetings.greetNameEntered('Siwe', 'English' );
+
+        assert.equal(5,greetings.countDisplay());
     });
     
     

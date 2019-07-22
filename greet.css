@@ -1,5 +1,5 @@
 body {
-   background-image: url(backlit.jpg); 
+   background-image: url(jellyfish.jpg); 
    background-repeat: no-repeat;
    background-size: cover;
 }
@@ -20,12 +20,15 @@ label{
    display: flex;
    justify-content: center; 
    color: black;
+   font-weight: bold;
+
 }
 
 .name{
    display: flex;
    justify-content: center; 
    font: 30px arial, sans-serif;
+   font-weight: bold;
 }
 
 .language{
@@ -33,6 +36,7 @@ label{
    display: flex;
    font-size: 3em;
    padding-block-start: auto;
+   
 }
 
 .counter{
@@ -40,6 +44,7 @@ label{
    justify-content: center;
    color: black; 
    font-size: 1.5em; 
+   font-weight: bold;
 
 }
 
@@ -54,6 +59,7 @@ label{
 span{
    color:black;
    font: 15px arial, sans-serif;
+   font-weight: bold;
 
 }
 
