@@ -15,9 +15,11 @@ function FactoryGreetings(nameList) {
           }
 
         var upperCaseName = fname.charAt(0).toUpperCase() + fname.slice(1); 
+
+        var lowerCaseName = fname.toLowerCase();
        
-        if (greetedNames[upperCaseName] === undefined) {
-            greetedNames[upperCaseName] = 0;
+        if (greetedNames[lowerCaseName] === undefined) {
+            greetedNames[lowerCaseName] = 0;
         }
 
         if (lang === "English") {
