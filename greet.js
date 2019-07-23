@@ -7,7 +7,13 @@ function FactoryGreetings(nameList) {
     function greetNameEntered(fname, lang) {
 
         if(!lang){
-                
+             return "Please enter a name and choose a language";   
+          } 
+        
+        else if(!fname) {
+            return "Please enter a name";
+          }
+
         var upperCaseName = fname.charAt(0).toUpperCase() + fname.slice(1); 
        
         if (greetedNames[upperCaseName] === undefined) {
@@ -23,11 +29,6 @@ function FactoryGreetings(nameList) {
 
         else if (lang === "Afrikaans") {
             return   "Hallo, " + upperCaseName;
-        }
-
-    }
-        else {
-            return "Please enter a name and choose a language";
         }
         
     }
